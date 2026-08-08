@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const config = window.APP_CONFIG || {};
-  const destinationUrl = config.MAIN_CONTENT_SITE_URL || "https://example.com/uk-student-grants";
+  const destinationUrl = config.MAIN_CONTENT_SITE_URL || "https://jobfundnews.netlify.app/";
 
   // 1. Bind destination URL & interaction handlers to all APPLY NOW buttons
   const applyButtons = document.querySelectorAll('.js-apply-now, [data-cta="apply"]');
