@@ -1,0 +1,5 @@
+# robots.txt for Website 1 (Campaign Landing Page)
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
