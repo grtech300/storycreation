@@ -109,20 +109,20 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* CENTERED LOGO */
-  text-align: center;
+  justify-content: space-between; /* LOGO TO LEFT, CTA TO RIGHT */
+  gap: 0.75rem;
 }
 
 .brand-badge {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--color-text-primary);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand-icon {
@@ -136,6 +136,37 @@ body {
   color: #FFFFFF;
   font-size: 0.9rem;
   font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Header Top-Right Duplicated APPLY NOW Button */
+.header-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary), #1D4ED8);
+  color: #FFFFFF;
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  padding: 0.45rem 1.1rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.header-cta-button:hover,
+.header-cta-button:focus,
+.header-cta-button:active,
+.header-cta-button.is-toggled,
+.header-cta-button.green-state {
+  background: linear-gradient(135deg, #059669, #047857) !important;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.45) !important;
+  transform: translateY(-1px);
 }
 
 /* 5. Main Content Area & Responsive Card */
