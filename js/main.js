@@ -18,6 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add toggle class on click/tap/focus
     button.addEventListener("click", function (event) {
       button.classList.toggle("is-toggled");
+      if (typeof window.ttq === "object" && typeof window.ttq.track === "function") {
+        window.ttq.track('ClickButton', {
+          "contents": [
+            {
+              "content_id": "ai-story-creation-guide",
+              "content_type": "product",
+              "content_name": "AI Story Video Creation Guide"
+            }
+          ]
+        });
+        window.ttq.track('Lead', {
+          "contents": [
+            {
+              "content_id": "ai-story-creation-guide",
+              "content_type": "product",
+              "content_name": "AI Story Video Creation Guide"
+            }
+          ]
+        });
+      }
       if (typeof window.trackCtaClick === "function") {
         window.trackCtaClick("apply_now", destinationUrl);
       }
