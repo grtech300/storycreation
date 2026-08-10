@@ -10,7 +10,7 @@ window.APP_CONFIG = {
   // 1. PRIMARY DESTINATION URL (Website 2)
   // =========================================================================
   // The "APPLY NOW" button across Website 1 will direct visitors to this URL.
-  MAIN_CONTENT_SITE_URL: "https://jobfundnews.netlify.app/",
+  MAIN_CONTENT_SITE_URL: "https://selar.com/23us7335w8",
 
   // =========================================================================
   // 2. OPTIONAL ANALYTICS CONFIGURATION
