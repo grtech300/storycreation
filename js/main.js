@@ -19,24 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (event) {
       button.classList.toggle("is-toggled");
       if (typeof window.ttq === "object" && typeof window.ttq.track === "function") {
-        window.ttq.track('ClickButton', {
+        var eventPayload = {
           "contents": [
             {
               "content_id": "ai-story-creation-guide",
               "content_type": "product",
               "content_name": "AI Story Video Creation Guide"
             }
-          ]
-        });
-        window.ttq.track('Lead', {
-          "contents": [
-            {
-              "content_id": "ai-story-creation-guide",
-              "content_type": "product",
-              "content_name": "AI Story Video Creation Guide"
-            }
-          ]
-        });
+          ],
+          "value": 1,
+          "currency": "USD"
+        };
+        window.ttq.track('AddToCart', eventPayload);
+        window.ttq.track('InitiateCheckout', eventPayload);
+        window.ttq.track('PlaceAnOrder', eventPayload);
+        window.ttq.track('ClickButton', eventPayload);
+        window.ttq.track('Lead', eventPayload);
       }
       if (typeof window.trackCtaClick === "function") {
         window.trackCtaClick("apply_now", destinationUrl);
