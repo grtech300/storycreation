@@ -30,11 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
           "value": 1,
           "currency": "USD"
         };
-        window.ttq.track('AddToCart', eventPayload);
-        window.ttq.track('InitiateCheckout', eventPayload);
-        window.ttq.track('PlaceAnOrder', eventPayload);
-        window.ttq.track('ClickButton', eventPayload);
-        window.ttq.track('Lead', eventPayload);
+        var makeEventId = function(eventName) {
+          return eventName.toLowerCase() + '_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
+        };
+        window.ttq.track('ClickButton', eventPayload, { "event_id": makeEventId('ClickButton') });
+        window.ttq.track('Contact', eventPayload, { "event_id": makeEventId('Contact') });
+        window.ttq.track('Lead', eventPayload, { "event_id": makeEventId('Lead') });
+        window.ttq.track('AddToCart', eventPayload, { "event_id": makeEventId('AddToCart') });
+        window.ttq.track('InitiateCheckout', eventPayload, { "event_id": makeEventId('InitiateCheckout') });
+        window.ttq.track('PlaceAnOrder', eventPayload, { "event_id": makeEventId('PlaceAnOrder') });
+        window.ttq.track('CompleteRegistration', eventPayload, { "event_id": makeEventId('CompleteRegistration') });
       }
       if (typeof window.trackCtaClick === "function") {
         window.trackCtaClick("apply_now", destinationUrl);

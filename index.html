@@ -11,6 +11,7 @@
 
     ttq.load('D9SRLBRC77UA78AD72J0');
     ttq.page();
+    var viewContentEventId = Date.now() + '_' + Math.floor(Math.random() * 1000);
     ttq.track('ViewContent', {
       "contents": [
         {
@@ -21,6 +22,8 @@
       ],
       "value": 1,
       "currency": "USD"
+    }, {
+      "event_id": viewContentEventId
     });
   }(window, document, 'ttq');
   </script>
